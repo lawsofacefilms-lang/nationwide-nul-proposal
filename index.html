@@ -131,6 +131,51 @@
   .chip--text{font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#c9c9cf;opacity:.72;white-space:nowrap}
   .chip:hover img{opacity:1}
 
+  /* SELECTED WORK */
+  .video-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+  .film-cap{margin-bottom:12px}
+  .film-cap .no{color:var(--gold);font-weight:800;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+  .film-cap h3{font-size:18px;margin-top:5px}
+  .film-feature{margin-bottom:26px}
+  .film-duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .film-vert{display:grid;grid-template-columns:300px 1fr;gap:30px;align-items:center;margin-top:28px}
+  .vwrap{position:relative;padding-bottom:177.78%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;max-width:300px}
+  .vwrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+  @media(max-width:640px){.film-duo{grid-template-columns:1fr}.film-vert{grid-template-columns:1fr}}
+
+  /* WHY */
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+  .why .w{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .why .w .n{color:var(--gold);font-weight:800;font-size:12px;letter-spacing:.16em}
+  .why .w h3{font-size:16px;margin:10px 0 6px}
+  .why .w p{color:var(--muted);font-size:13.5px}
+  @media(max-width:640px){.why{grid-template-columns:1fr}}
+
+  /* PROCESS */
+  .step{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+  .step:first-child{border-top:none}
+  .step .num{width:40px;height:40px;border:1.5px solid var(--gold);color:var(--gold);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+  .step h3{font-size:17px;margin-bottom:4px}
+  .step p{color:var(--muted);font-size:14px}
+  .step .when{color:var(--gold-soft);font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:7px}
+
+  /* TESTIMONIAL */
+  .quote{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);
+    border-radius:16px;padding:32px 36px;margin-top:6px}
+  .quote .mk{color:var(--gold);font-size:40px;line-height:.7;font-weight:800}
+  .quote blockquote{font-size:19px;line-height:1.55;color:#ece7dd;margin:6px 0 16px;font-style:italic}
+  .quote .by{color:var(--muted);font-size:14px}
+  .quote .by strong{color:var(--ink)}
+
+  /* HONEYBOOK BUTTON */
+  .hb-btn{display:inline-block;margin:24px 0 4px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));
+    color:#161310;font-weight:800;letter-spacing:.02em;padding:15px 30px;border-radius:12px;font-size:15px;
+    box-shadow:0 10px 30px rgba(201,162,75,.28);transition:transform .2s ease,box-shadow .2s ease}
+  .hb-btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(201,162,75,.42)}
+  .hb-note{color:var(--muted);font-size:12.5px;margin-top:4px}
+
   /* INVESTMENT TABLE */
   .invest{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
   table{width:100%;border-collapse:collapse}
@@ -316,6 +361,20 @@
   </div>
 </section>
 
+<!-- WHY -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Why Laws of Ace</div>
+    <h2>Community roots, corporate polish</h2>
+    <p class="lead">You're not hiring a camera — you're hiring a partner who makes leadership look the part and makes a brand feel human.</p>
+    <div class="why">
+      <div class="w"><div class="n">01</div><h3>Executive-ready</h3><p>Comfortable in the room with C-suite and leadership — calm, unobtrusive, and fast on a live event floor.</p></div>
+      <div class="w"><div class="n">02</div><h3>Story over footage</h3><p>Every film carries a message and a mission, not just a moment — made to live long after the room clears.</p></div>
+      <div class="w"><div class="n">03</div><h3>Built for social</h3><p>Delivered in 4K broadcast and vertical social cuts, ready to post the week of the conference while momentum is hot.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- TRUSTED BY -->
 <section>
   <div class="wrap">
@@ -358,6 +417,55 @@
 </section>
 
 <!-- INVESTMENT -->
+<!-- SELECTED WORK -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Selected Work</div>
+    <h2>See the films in motion</h2>
+    <p class="lead">A few recent pieces in the same spirit as what we'll build for Nationwide — corporate presence, community story, and event energy.</p>
+
+    <div class="film-feature">
+      <div class="film-cap"><span class="no">Featured &middot; Corporate Recap</span><h3>Pinnacle Financial Partners</h3></div>
+      <div class="video-wrap"><iframe src="https://galleries.vidflow.co/videos/j888whc3" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>
+    </div>
+
+    <div class="film-duo">
+      <div>
+        <div class="film-cap"><span class="no">Fundraiser Event</span><h3>NBIC Fundraiser</h3></div>
+        <div class="video-wrap"><iframe src="https://galleries.vidflow.co/videos/omcuqfoj" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>
+      </div>
+      <div>
+        <div class="film-cap"><span class="no">Ribbon Cutting</span><h3>Forward Creative Commons</h3></div>
+        <div class="video-wrap"><iframe src="https://galleries.vidflow.co/videos/t8lhkr33" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>
+      </div>
+    </div>
+
+    <div class="film-vert">
+      <div class="vwrap"><iframe src="https://galleries.vidflow.co/videos/i2lokpn0" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>
+      <div>
+        <div class="film-cap"><span class="no">Vertical &middot; Social Format</span><h3>NPEF Teacherpreneur — Episode 2</h3></div>
+        <p class="lead" style="margin-bottom:0">Shot and cut vertical for Reels, TikTok, and LinkedIn — proof I deliver the same 4K social-ready format your conference films will ship in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">How We Work Together</div>
+    <h2>A turnkey process, start to delivery</h2>
+    <p class="lead">From the first call to final files, here's exactly what to expect — organized, on schedule, and easy on your team.</p>
+    <div class="proc">
+      <div class="step"><div class="num">1</div><div><h3>Lock &amp; align</h3><p>Sign off, then a short pre-production call to align on goals, key executives, must-get moments, and run-of-show.</p><div class="when">Before the conference</div></div></div>
+      <div class="step"><div class="num">2</div><div><h3>On the ground</h3><p>Full mobile cinema kit across both days — run-and-gun ready, coordinated to your executives' schedule, always out of the way.</p><div class="when">Jul 30 &amp; Aug 1, 2026</div></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Edit &amp; first cut</h3><p>Story-driven edit, color grade, sound design, and licensed music — delivered for your review.</p><div class="when">Within 10 business days</div></div></div>
+      <div class="step"><div class="num">4</div><div><h3>Refine</h3><p>Two rounds of revisions per film so the final cut lands exactly right for your brand and stakeholders.</p><div class="when">Two rounds included</div></div></div>
+      <div class="step"><div class="num">5</div><div><h3>Deliver &amp; post</h3><p>Final 4K films in broadcast and vertical social formats, with full usage rights — ready to publish while the conference is still buzzing.</p><div class="when">You own it</div></div></div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="eyebrow">Investment</div>
@@ -408,7 +516,10 @@
   <div class="wrap">
     <div class="eyebrow">Let's Make It</div>
     <h2>Ready to roll in Nashville</h2>
-    <p>If this direction works, a quick signature locks the dates and I'll send the invoice. I'm excited to build something lasting with PMM and Nationwide.</p>
+    <p>If this direction works, everything you need to move forward — invoice and agreement — is ready in HoneyBook. One signature locks your dates for the National Urban League Conference.</p>
+    <p style="color:var(--muted);margin-top:10px">This first project is priced to start a relationship, not close a transaction — I'm building toward being PMM and Nationwide's go-to for content well beyond this event.</p>
+    <a class="hb-btn" href="#next-steps" target="_blank" rel="noopener">Review, Sign &amp; Pay in HoneyBook &rarr;</a>
+    <div class="hb-note">Secure signing &amp; payment handled in HoneyBook.</div>
 
     <div class="sign">
       <div class="block">
