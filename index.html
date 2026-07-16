@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laws of Ace Films — Videography Proposal | Nationwide × National Urban League Conference 2026</title>
+<style>
+  :root{
+    --bg:#0b0b0d;
+    --panel:#131418;
+    --panel-2:#191b20;
+    --ink:#f4f1ea;
+    --muted:#a7a29a;
+    --line:#2a2c33;
+    --gold:#c9a24b;
+    --gold-soft:#e7cf90;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-weight:700;letter-spacing:.01em;line-height:1.15}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.32em;font-size:11px;
+    color:var(--gold);font-weight:700
+  }
+  .muted{color:var(--muted)}
+  a{color:var(--gold-soft);text-decoration:none}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:96px 0 72px;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(1100px 420px at 80% -10%, rgba(201,162,75,.16), transparent 60%),
+      radial-gradient(700px 300px at 0% 10%, rgba(201,162,75,.06), transparent 60%),
+      var(--bg);
+  }
+  .brand{
+    display:flex;align-items:center;gap:14px;margin-bottom:54px;
+  }
+  .brand .mark{
+    width:44px;height:44px;border:1.5px solid var(--gold);
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:var(--gold);letter-spacing:.02em;font-size:15px
+  }
+  .brand .name{font-weight:800;letter-spacing:.28em;font-size:13px;text-transform:uppercase}
+  .brand .name span{color:var(--gold)}
+  .hero h1{font-size:44px;margin:18px 0 14px;letter-spacing:-.01em}
+  .hero h1 .accent{color:var(--gold)}
+  .hero .sub{font-size:18px;max-width:640px}
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:38px;font-size:13px
+  }
+  .hero-meta div{display:flex;flex-direction:column;gap:2px}
+  .hero-meta .k{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:10px;font-weight:700}
+  .hero-meta .v{font-weight:600}
+
+  /* SECTION */
+  section{padding:60px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:26px;margin-bottom:8px}
+  section .lead{color:var(--muted);max-width:660px;margin-bottom:34px;font-size:15.5px}
+
+  /* PREPARED FOR */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px
+  }
+  .card .k{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+  .card .v{font-size:16px;font-weight:600}
+  .card .v small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:3px}
+
+  /* VISION */
+  .vision p{font-size:16px;color:#dcd7cd;margin-bottom:16px}
+  .vision p:last-child{margin-bottom:0}
+
+  /* COVERAGE / timeline */
+  .day{
+    display:grid;grid-template-columns:170px 1fr;gap:24px;
+    padding:24px 0;border-top:1px solid var(--line)
+  }
+  .day:first-of-type{border-top:none}
+  .day .when .tag{
+    display:inline-block;background:rgba(201,162,75,.12);color:var(--gold-soft);
+    border:1px solid rgba(201,162,75,.35);border-radius:999px;
+    padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.05em;margin-bottom:8px
+  }
+  .day .when .date{font-weight:700;font-size:16px}
+  .day .when .time{color:var(--muted);font-size:13px}
+  .day ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .day li{position:relative;padding-left:22px;color:#dcd7cd;font-size:15px}
+  .day li:before{
+    content:"";position:absolute;left:0;top:9px;width:7px;height:7px;
+    background:var(--gold);border-radius:50%
+  }
+
+  /* DELIVERABLES */
+  .deliv{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .deliv .film{
+    background:linear-gradient(180deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);border-radius:14px;padding:26px
+  }
+  .deliv .film .no{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.2em}
+  .deliv .film h3{font-size:19px;margin:8px 0 10px}
+  .deliv .film p{color:var(--muted);font-size:14px}
+  .spec{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .spec div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .spec .k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .spec .v{font-weight:600;font-size:14px;margin-top:4px}
+
+  /* INVESTMENT TABLE */
+  .invest{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:15px 24px;text-align:left;font-size:14.5px}
+  thead th{
+    background:var(--panel-2);color:var(--gold);text-transform:uppercase;
+    letter-spacing:.14em;font-size:10.5px;border-bottom:1px solid var(--line)
+  }
+  th:last-child,td:last-child{text-align:right;white-space:nowrap}
+  tbody tr{border-bottom:1px solid var(--line)}
+  tbody td{color:#dcd7cd}
+  .sub-row td{font-weight:700;color:var(--ink);background:rgba(255,255,255,.015)}
+  .discount td{color:var(--gold-soft);font-weight:700}
+  .total-row td{
+    background:linear-gradient(90deg,rgba(201,162,75,.16),rgba(201,162,75,.05));
+    font-size:20px;font-weight:800;color:#fff;border-bottom:none
+  }
+  .total-row td:first-child{letter-spacing:.02em}
+  .note{margin-top:16px;color:var(--muted);font-size:13px}
+
+  /* TERMS */
+  .terms{display:grid;grid-template-columns:1fr 1fr;gap:14px 32px}
+  .terms .t{border-left:2px solid var(--gold);padding:2px 0 2px 16px}
+  .terms .t .k{font-weight:700;font-size:14.5px;margin-bottom:3px}
+  .terms .t .v{color:var(--muted);font-size:13.5px}
+
+  /* CTA */
+  .cta{
+    text-align:center;padding:72px 0;border-bottom:none;
+    background:radial-gradient(700px 300px at 50% 0%, rgba(201,162,75,.12), transparent 65%)
+  }
+  .cta h2{font-size:30px;margin-bottom:12px}
+  .cta p{color:var(--muted);max-width:520px;margin:0 auto 26px;font-size:15.5px}
+  .sign{
+    display:inline-flex;gap:36px;flex-wrap:wrap;justify-content:center;margin-top:30px;text-align:left
+  }
+  .sign .block{min-width:220px}
+  .sign .line{border-bottom:1px solid var(--line);height:34px;margin-bottom:8px}
+  .sign .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  .contact{margin-top:40px;font-size:14px;color:var(--muted)}
+  .contact strong{color:var(--gold-soft)}
+
+  footer{padding:34px 0;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.04em}
+
+  @media (max-width:720px){
+    .hero h1{font-size:32px}
+    .cards,.deliv,.terms{grid-template-columns:1fr}
+    .day{grid-template-columns:1fr;gap:10px}
+    .spec{grid-template-columns:1fr}
+    th,td{padding:13px 16px}
+  }
+  @media print{
+    body{background:#fff;color:#14151a}
+    .hero,section,.cta{border-color:#e6e3db}
+    .wrap{max-width:100%}
+    .invest,.card,.deliv .film,.spec div{break-inside:avoid}
+    .day,.deliv .film,tr{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">LA</div>
+      <div class="name">LAWS OF <span>ACE</span> FILMS</div>
+    </div>
+    <div class="eyebrow">Videography Proposal</div>
+    <h1>Executive Presence, <span class="accent">Captured.</span></h1>
+    <p class="sub">A cinematic content package for Nationwide's leadership at the 2026 National Urban League Conference — built to live long after the room clears.</p>
+
+    <div class="hero-meta">
+      <div><span class="k">Prepared For</span><span class="v">PMM Agency</span></div>
+      <div><span class="k">End Client</span><span class="v">Nationwide Insurance</span></div>
+      <div><span class="k">Event</span><span class="v">Nat'l Urban League Conf. · Nashville</span></div>
+      <div><span class="k">Dates</span><span class="v">Jul 30 &amp; Aug 1, 2026</span></div>
+      <div><span class="k">Prepared</span><span class="v">July 2026</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- PREPARED FOR -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The Engagement</div>
+    <h2>Who this is for</h2>
+    <p class="lead">Capturing Nationwide's executive presence and brand story across two days of the National Urban League Conference — delivered as polished, social-ready films.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="k">Agency</div>
+        <div class="v">PMM Agency<small>Attn: Dionte Williams · dwilliams@pmm-agency.com</small></div>
+      </div>
+      <div class="card">
+        <div class="k">Client Brand</div>
+        <div class="v">Nationwide Insurance<small>Executive & brand presence coverage</small></div>
+      </div>
+      <div class="card">
+        <div class="k">The Moment</div>
+        <div class="v">2026 National Urban League Conference<small>Nashville, TN · July 29 – August 1, 2026</small></div>
+      </div>
+      <div class="card">
+        <div class="k">The Ask</div>
+        <div class="v">Two finished films<small>90-second features, incl. Women's Empowerment Luncheon</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section>
+  <div class="wrap vision">
+    <div class="eyebrow">The Approach</div>
+    <h2>More than coverage — a narrative</h2>
+    <p class="lead">Anyone can point a camera at a stage. The difference is in the story.</p>
+    <p>Nationwide isn't just attending the National Urban League Conference — it's showing up for a community. My job is to make that visible: the handshakes, the keynote energy, the quiet leadership moments between sessions, and the pride of the Women's Empowerment Luncheon.</p>
+    <p>I shoot with cinema-grade cameras, dedicated audio, and intentional lighting, then craft each edit around a single emotional throughline. The result is content your executives are proud to share and your brand team can repurpose across LinkedIn, internal channels, and future recruitment.</p>
+    <p>Two days on the ground. Two films that keep working long after Nashville.</p>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Scope of Coverage</div>
+    <h2>Two days on the ground</h2>
+    <p class="lead">Full mobile kit, run-and-gun ready, coordinated to your executives' schedule.</p>
+
+    <div class="day">
+      <div class="when">
+        <span class="tag">DAY 01</span>
+        <div class="date">Thursday, July 30</div>
+        <div class="time">12:00 PM – 3:00 PM</div>
+      </div>
+      <ul>
+        <li>Executive arrivals, on-floor presence & brand-moment coverage</li>
+        <li>Candid leadership interactions and networking b-roll</li>
+        <li>Optional short-form soundbite / interview capture</li>
+        <li>Environmental & branded-space detail shots</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="when">
+        <span class="tag">DAY 02</span>
+        <div class="date">Saturday, August 1</div>
+        <div class="time">10:00 AM – 3:00 PM</div>
+      </div>
+      <ul>
+        <li>Women's Empowerment Luncheon — full-room energy & keynote moments</li>
+        <li>Executive remarks, reactions & audience engagement</li>
+        <li>Relationship & community-impact storytelling b-roll</li>
+        <li>Closing brand moments to bookend the films</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Deliverables</div>
+    <h2>Two finished films</h2>
+    <p class="lead">Both fully edited, color-graded, scored with licensed music, and delivered ready to post.</p>
+    <div class="deliv">
+      <div class="film">
+        <div class="no">FILM 01</div>
+        <h3>Conference Brand Recap</h3>
+        <p>A 90-second cinematic recap of Nationwide's presence across the conference — energy, leadership, and community in one shareable story.</p>
+      </div>
+      <div class="film">
+        <div class="no">FILM 02</div>
+        <h3>Women's Empowerment Feature</h3>
+        <p>A 90-second feature built around the Women's Empowerment Luncheon — spotlighting the mission, the message, and the moment.</p>
+      </div>
+    </div>
+    <div class="spec">
+      <div><div class="k">Length</div><div class="v">Up to 90 sec each</div></div>
+      <div><div class="k">Format</div><div class="v">4K · Social + broadcast cuts</div></div>
+      <div><div class="k">Revisions</div><div class="v">2 rounds included</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Investment</div>
+    <h2>What this really costs — and what you'll pay</h2>
+    <p class="lead">Below is the true production value of this engagement. As a first project with PMM &amp; Nationwide, I'm extending a partnership rate to establish the relationship.</p>
+
+    <div class="invest">
+      <table>
+        <thead>
+          <tr><th>Production Component</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pre-production &amp; creative direction (shot list, run-of-show)</td><td>$300</td></tr>
+          <tr><td>Principal cinematography — Day 1 (up to 3 hrs, cinema kit + audio + lighting)</td><td>$750</td></tr>
+          <tr><td>Principal cinematography — Day 2 (up to 5 hrs, incl. Women's Empowerment Luncheon)</td><td>$1,200</td></tr>
+          <tr><td>Post-production &amp; editing — Highlight Film #1 (≤90 sec)</td><td>$700</td></tr>
+          <tr><td>Post-production &amp; editing — Highlight Film #2 (≤90 sec)</td><td>$700</td></tr>
+          <tr><td>Color grading, sound design &amp; licensed music</td><td>$350</td></tr>
+          <tr><td>Motion graphics / lower-thirds &amp; multi-format delivery</td><td>$250</td></tr>
+          <tr class="sub-row"><td>Total production value</td><td>$4,250</td></tr>
+          <tr class="discount"><td>New-client partnership investment (Laws of Ace Films)</td><td>−$2,950</td></tr>
+          <tr class="total-row"><td>Your investment</td><td>$1,300</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Payment terms: Net 30. This partnership rate reflects a ~69% investment into building a long-term creative relationship with PMM Agency and Nationwide.</p>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The Details</div>
+    <h2>Terms &amp; what's included</h2>
+    <div class="terms">
+      <div class="t"><div class="k">Payment</div><div class="v">$1,300 total, Net 30 from final delivery via invoice.</div></div>
+      <div class="t"><div class="k">Revisions</div><div class="v">Two rounds of revisions per film included.</div></div>
+      <div class="t"><div class="k">Delivery</div><div class="v">Final films delivered digitally within 10 business days of the final shoot.</div></div>
+      <div class="t"><div class="k">Usage Rights</div><div class="v">Full usage rights granted to PMM Agency &amp; Nationwide upon final payment.</div></div>
+      <div class="t"><div class="k">Equipment</div><div class="v">Professional cinema camera, lenses, audio &amp; lighting — fully provided.</div></div>
+      <div class="t"><div class="k">Credit</div><div class="v">Laws of Ace Films retains the right to use finished work in its portfolio.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow">Let's Make It</div>
+    <h2>Ready to roll in Nashville</h2>
+    <p>If this direction works, a quick signature locks the dates and I'll send the invoice. I'm excited to build something lasting with PMM and Nationwide.</p>
+
+    <div class="sign">
+      <div class="block">
+        <div class="line"></div>
+        <div class="lbl">PMM Agency — Authorized Signature</div>
+      </div>
+      <div class="block">
+        <div class="line"></div>
+        <div class="lbl">Date</div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <strong>Bryan Williams</strong> · Laws of Ace Films<br>
+      lawsofacefilms@gmail.com · Nashville, TN
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Laws of Ace Films · Prepared exclusively for PMM Agency &amp; Nationwide Insurance
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laws of Ace Films — Videography Proposal | Nationwide × National Urban League Conference 2026</title>
+<style>
+  :root{
+    --bg:#0b0b0d;
+    --panel:#131418;
+    --panel-2:#191b20;
+    --ink:#f4f1ea;
+    --muted:#a7a29a;
+    --line:#2a2c33;
+    --gold:#c9a24b;
+    --gold-soft:#e7cf90;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-weight:700;letter-spacing:.01em;line-height:1.15}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.32em;font-size:11px;
+    color:var(--gold);font-weight:700
+  }
+  .muted{color:var(--muted)}
+  a{color:var(--gold-soft);text-decoration:none}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:96px 0 72px;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(1100px 420px at 80% -10%, rgba(201,162,75,.16), transparent 60%),
+      radial-gradient(700px 300px at 0% 10%, rgba(201,162,75,.06), transparent 60%),
+      var(--bg);
+  }
+  .brand{
+    display:flex;align-items:center;gap:14px;margin-bottom:54px;
+  }
+  .brand .mark{
+    width:44px;height:44px;border:1.5px solid var(--gold);
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:var(--gold);letter-spacing:.02em;font-size:15px
+  }
+  .brand .name{font-weight:800;letter-spacing:.28em;font-size:13px;text-transform:uppercase}
+  .brand .name span{color:var(--gold)}
+  .hero h1{font-size:44px;margin:18px 0 14px;letter-spacing:-.01em}
+  .hero h1 .accent{color:var(--gold)}
+  .hero .sub{font-size:18px;max-width:640px}
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:38px;font-size:13px
+  }
+  .hero-meta div{display:flex;flex-direction:column;gap:2px}
+  .hero-meta .k{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:10px;font-weight:700}
+  .hero-meta .v{font-weight:600}
+
+  /* SECTION */
+  section{padding:60px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:26px;margin-bottom:8px}
+  section .lead{color:var(--muted);max-width:660px;margin-bottom:34px;font-size:15.5px}
+
+  /* PREPARED FOR */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px
+  }
+  .card .k{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+  .card .v{font-size:16px;font-weight:600}
+  .card .v small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:3px}
+
+  /* VISION */
+  .vision p{font-size:16px;color:#dcd7cd;margin-bottom:16px}
+  .vision p:last-child{margin-bottom:0}
+
+  /* COVERAGE / timeline */
+  .day{
+    display:grid;grid-template-columns:170px 1fr;gap:24px;
+    padding:24px 0;border-top:1px solid var(--line)
+  }
+  .day:first-of-type{border-top:none}
+  .day .when .tag{
+    display:inline-block;background:rgba(201,162,75,.12);color:var(--gold-soft);
+    border:1px solid rgba(201,162,75,.35);border-radius:999px;
+    padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.05em;margin-bottom:8px
+  }
+  .day .when .date{font-weight:700;font-size:16px}
+  .day .when .time{color:var(--muted);font-size:13px}
+  .day ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .day li{position:relative;padding-left:22px;color:#dcd7cd;font-size:15px}
+  .day li:before{
+    content:"";position:absolute;left:0;top:9px;width:7px;height:7px;
+    background:var(--gold);border-radius:50%
+  }
+
+  /* DELIVERABLES */
+  .deliv{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .deliv .film{
+    background:linear-gradient(180deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);border-radius:14px;padding:26px
+  }
+  .deliv .film .no{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.2em}
+  .deliv .film h3{font-size:19px;margin:8px 0 10px}
+  .deliv .film p{color:var(--muted);font-size:14px}
+  .spec{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .spec div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .spec .k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .spec .v{font-weight:600;font-size:14px;margin-top:4px}
+
+  /* INVESTMENT TABLE */
+  .invest{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:15px 24px;text-align:left;font-size:14.5px}
+  thead th{
+    background:var(--panel-2);color:var(--gold);text-transform:uppercase;
+    letter-spacing:.14em;font-size:10.5px;border-bottom:1px solid var(--line)
+  }
+  th:last-child,td:last-child{text-align:right;white-space:nowrap}
+  tbody tr{border-bottom:1px solid var(--line)}
+  tbody td{color:#dcd7cd}
+  .sub-row td{font-weight:700;color:var(--ink);background:rgba(255,255,255,.015)}
+  .discount td{color:var(--gold-soft);font-weight:700}
+  .total-row td{
+    background:linear-gradient(90deg,rgba(201,162,75,.16),rgba(201,162,75,.05));
+    font-size:20px;font-weight:800;color:#fff;border-bottom:none
+  }
+  .total-row td:first-child{letter-spacing:.02em}
+  .note{margin-top:16px;color:var(--muted);font-size:13px}
+
+  /* TERMS */
+  .terms{display:grid;grid-template-columns:1fr 1fr;gap:14px 32px}
+  .terms .t{border-left:2px solid var(--gold);padding:2px 0 2px 16px}
+  .terms .t .k{font-weight:700;font-size:14.5px;margin-bottom:3px}
+  .terms .t .v{color:var(--muted);font-size:13.5px}
+
+  /* CTA */
+  .cta{
+    text-align:center;padding:72px 0;border-bottom:none;
+    background:radial-gradient(700px 300px at 50% 0%, rgba(201,162,75,.12), transparent 65%)
+  }
+  .cta h2{font-size:30px;margin-bottom:12px}
+  .cta p{color:var(--muted);max-width:520px;margin:0 auto 26px;font-size:15.5px}
+  .sign{
+    display:inline-flex;gap:36px;flex-wrap:wrap;justify-content:center;margin-top:30px;text-align:left
+  }
+  .sign .block{min-width:220px}
+  .sign .line{border-bottom:1px solid var(--line);height:34px;margin-bottom:8px}
+  .sign .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  .contact{margin-top:40px;font-size:14px;color:var(--muted)}
+  .contact strong{color:var(--gold-soft)}
+
+  footer{padding:34px 0;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.04em}
+
+  @media (max-width:720px){
+    .hero h1{font-size:32px}
+    .cards,.deliv,.terms{grid-template-columns:1fr}
+    .day{grid-template-columns:1fr;gap:10px}
+    .spec{grid-template-columns:1fr}
+    th,td{padding:13px 16px}
+  }
+  @media print{
+    body{background:#fff;color:#14151a}
+    .hero,section,.cta{border-color:#e6e3db}
+    .wrap{max-width:100%}
+    .invest,.card,.deliv .film,.spec div{break-inside:avoid}
+    .day,.deliv .film,tr{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">LA</div>
+      <div class="name">LAWS OF <span>ACE</span> FILMS</div>
+    </div>
+    <div class="eyebrow">Videography Proposal</div>
+    <h1>Executive Presence, <span class="accent">Captured.</span></h1>
+    <p class="sub">A cinematic content package for Nationwide's leadership at the 2026 National Urban League Conference — built to live long after the room clears.</p>
+
+    <div class="hero-meta">
+      <div><span class="k">Prepared For</span><span class="v">PMM Agency</span></div>
+      <div><span class="k">End Client</span><span class="v">Nationwide Insurance</span></div>
+      <div><span class="k">Event</span><span class="v">Nat'l Urban League Conf. · Nashville</span></div>
+      <div><span class="k">Dates</span><span class="v">Jul 30 &amp; Aug 1, 2026</span></div>
+      <div><span class="k">Prepared</span><span class="v">July 2026</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- PREPARED FOR -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The Engagement</div>
+    <h2>Who this is for</h2>
+    <p class="lead">Capturing Nationwide's executive presence and brand story across two days of the National Urban League Conference — delivered as polished, social-ready films.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="k">Agency</div>
+        <div class="v">PMM Agency<small>Attn: Dionte Williams · dwilliams@pmm-agency.com</small></div>
+      </div>
+      <div class="card">
+        <div class="k">Client Brand</div>
+        <div class="v">Nationwide Insurance<small>Executive & brand presence coverage</small></div>
+      </div>
+      <div class="card">
+        <div class="k">The Moment</div>
+        <div class="v">2026 National Urban League Conference<small>Nashville, TN · July 29 – August 1, 2026</small></div>
+      </div>
+      <div class="card">
+        <div class="k">The Ask</div>
+        <div class="v">Two finished films<small>90-second features, incl. Women's Empowerment Luncheon</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section>
+  <div class="wrap vision">
+    <div class="eyebrow">The Approach</div>
+    <h2>More than coverage — a narrative</h2>
+    <p class="lead">Anyone can point a camera at a stage. The difference is in the story.</p>
+    <p>Nationwide isn't just attending the National Urban League Conference — it's showing up for a community. My job is to make that visible: the handshakes, the keynote energy, the quiet leadership moments between sessions, and the pride of the Women's Empowerment Luncheon.</p>
+    <p>I shoot with cinema-grade cameras, dedicated audio, and intentional lighting, then craft each edit around a single emotional throughline. The result is content your executives are proud to share and your brand team can repurpose across LinkedIn, internal channels, and future recruitment.</p>
+    <p>Two days on the ground. Two films that keep working long after Nashville.</p>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Scope of Coverage</div>
+    <h2>Two days on the ground</h2>
+    <p class="lead">Full mobile kit, run-and-gun ready, coordinated to your executives' schedule.</p>
+
+    <div class="day">
+      <div class="when">
+        <span class="tag">DAY 01</span>
+        <div class="date">Thursday, July 30</div>
+        <div class="time">12:00 PM – 3:00 PM</div>
+      </div>
+      <ul>
+        <li>Executive arrivals, on-floor presence & brand-moment coverage</li>
+        <li>Candid leadership interactions and networking b-roll</li>
+        <li>Optional short-form soundbite / interview capture</li>
+        <li>Environmental & branded-space detail shots</li>
+      </ul>
+    </div>
+
+    <div class="day">
+      <div class="when">
+        <span class="tag">DAY 02</span>
+        <div class="date">Saturday, August 1</div>
+        <div class="time">10:00 AM – 3:00 PM</div>
+      </div>
+      <ul>
+        <li>Women's Empowerment Luncheon — full-room energy & keynote moments</li>
+        <li>Executive remarks, reactions & audience engagement</li>
+        <li>Relationship & community-impact storytelling b-roll</li>
+        <li>Closing brand moments to bookend the films</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Deliverables</div>
+    <h2>Two finished films</h2>
+    <p class="lead">Both fully edited, color-graded, scored with licensed music, and delivered ready to post.</p>
+    <div class="deliv">
+      <div class="film">
+        <div class="no">FILM 01</div>
+        <h3>Conference Brand Recap</h3>
+        <p>A 90-second cinematic recap of Nationwide's presence across the conference — energy, leadership, and community in one shareable story.</p>
+      </div>
+      <div class="film">
+        <div class="no">FILM 02</div>
+        <h3>Women's Empowerment Feature</h3>
+        <p>A 90-second feature built around the Women's Empowerment Luncheon — spotlighting the mission, the message, and the moment.</p>
+      </div>
+    </div>
+    <div class="spec">
+      <div><div class="k">Length</div><div class="v">Up to 90 sec each</div></div>
+      <div><div class="k">Format</div><div class="v">4K · Social + broadcast cuts</div></div>
+      <div><div class="k">Revisions</div><div class="v">2 rounds included</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Investment</div>
+    <h2>What this really costs — and what you'll pay</h2>
+    <p class="lead">Below is the true production value of this engagement. As a first project with PMM &amp; Nationwide, I'm extending a partnership rate to establish the relationship.</p>
+
+    <div class="invest">
+      <table>
+        <thead>
+          <tr><th>Production Component</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pre-production &amp; creative direction (shot list, run-of-show)</td><td>$300</td></tr>
+          <tr><td>Principal cinematography — Day 1 (up to 3 hrs, cinema kit + audio + lighting)</td><td>$750</td></tr>
+          <tr><td>Principal cinematography — Day 2 (up to 5 hrs, incl. Women's Empowerment Luncheon)</td><td>$1,200</td></tr>
+          <tr><td>Post-production &amp; editing — Highlight Film #1 (≤90 sec)</td><td>$700</td></tr>
+          <tr><td>Post-production &amp; editing — Highlight Film #2 (≤90 sec)</td><td>$700</td></tr>
+          <tr><td>Color grading, sound design &amp; licensed music</td><td>$350</td></tr>
+          <tr><td>Motion graphics / lower-thirds &amp; multi-format delivery</td><td>$250</td></tr>
+          <tr class="sub-row"><td>Total production value</td><td>$4,250</td></tr>
+          <tr class="discount"><td>New-client partnership investment (Laws of Ace Films)</td><td>−$2,950</td></tr>
+          <tr class="total-row"><td>Your investment</td><td>$1,300</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Payment terms: Net 30. This partnership rate reflects a ~69% investment into building a long-term creative relationship with PMM Agency and Nationwide.</p>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The Details</div>
+    <h2>Terms &amp; what's included</h2>
+    <div class="terms">
+      <div class="t"><div class="k">Payment</div><div class="v">$1,300 total, Net 30 from final delivery via invoice.</div></div>
+      <div class="t"><div class="k">Revisions</div><div class="v">Two rounds of revisions per film included.</div></div>
+      <div class="t"><div class="k">Delivery</div><div class="v">Final films delivered digitally within 10 business days of the final shoot.</div></div>
+      <div class="t"><div class="k">Usage Rights</div><div class="v">Full usage rights granted to PMM Agency &amp; Nationwide upon final payment.</div></div>
+      <div class="t"><div class="k">Equipment</div><div class="v">Professional cinema camera, lenses, audio &amp; lighting — fully provided.</div></div>
+      <div class="t"><div class="k">Credit</div><div class="v">Laws of Ace Films retains the right to use finished work in its portfolio.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow">Let's Make It</div>
+    <h2>Ready to roll in Nashville</h2>
+    <p>If this direction works, a quick signature locks the dates and I'll send the invoice. I'm excited to build something lasting with PMM and Nationwide.</p>
+
+    <div class="sign">
+      <div class="block">
+        <div class="line"></div>
+        <div class="lbl">PMM Agency — Authorized Signature</div>
+      </div>
+      <div class="block">
+        <div class="line"></div>
+        <div class="lbl">Date</div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <strong>Bryan Williams</strong> · Laws of Ace Films<br>
+      lawsofacefilms@gmail.com · Nashville, TN
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Laws of Ace Films · Prepared exclusively for PMM Agency &amp; Nationwide Insurance
+</footer>
+
+</body>
+</html>
